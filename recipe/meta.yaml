@@ -1,6 +1,6 @@
 {% set name = "colorcet" %}
-{% set version = "2.0.2" %}
-{% set sha256 = "514813790a74b578c3eaff76b2102274c2ba8b0239c9504586df685223007dee" %}
+{% set version = "2.0.5" %}
+{% set sha256 = "2246ad5e09f37834a3225bf20ccb2700bc565018f133a1ff3d86bb0fdb7fee5c" %}
 
 package:
   name: {{ name|lower }}
