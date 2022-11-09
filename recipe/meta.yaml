@@ -40,7 +40,6 @@ about:
   home: https://colorcet.holoviz.org/index.html
   license: CC-BY-4.0
   license_family: CC
-  license_url: https://github.com/holoviz/colorcet/blob/master/LICENSE.txt
   license_file: LICENSE.txt
   summary: Collection of perceptually uniform colormaps
   description: |
@@ -48,7 +47,6 @@ about:
     Python plotting programs like bokeh, matplotlib, holoviews, and datashader.
   dev_url: https://github.com/holoviz/colorcet
   doc_url: https://colorcet.holoviz.org/user_guide/index.html
-  doc_source_url: https://github.com/holoviz/colorcet/tree/master/doc
 
 extra:
   recipe-maintainers:
