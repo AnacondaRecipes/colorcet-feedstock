@@ -1,6 +1,6 @@
 {% set name = "colorcet" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "21c522346a7aa81a603729f2996c22ac3f7822f4c8c303c59761e27d2dfcf3db" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "51455a20353d12fac91f953772d8409f2474e6a0db1af3fa4f7005f405a2480b" %}
 
 package:
   name: {{ name|lower }}
@@ -12,34 +12,34 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  entry_points:
+    - colorcet = colorcet.__main__:main
 
 requirements:
   host:
     - python
     - pip
-    - setuptools >=30.3.0
-    - param >=1.7.0
     - pyct >=0.4.4
+    - setuptools >=30.3.0
     - wheel
   run:
     - python
-    - param >=1.7.0
     - pyct >=0.4.4
 
 test:
-  requires:
-    - pip
   imports:
     - colorcet
+  requires:
+    - pip
   commands:
     - pip check
+    - colorcet --help
 
 about:
   home: https://colorcet.holoviz.org/index.html
   license: CC-BY-4.0
   license_family: CC
-  license_url: https://github.com/holoviz/colorcet/blob/master/LICENSE.txt
   license_file: LICENSE.txt
   summary: Collection of perceptually uniform colormaps
   description: |
@@ -47,7 +47,6 @@ about:
     Python plotting programs like bokeh, matplotlib, holoviews, and datashader.
   dev_url: https://github.com/holoviz/colorcet
   doc_url: https://colorcet.holoviz.org/user_guide/index.html
-  doc_source_url: https://github.com/holoviz/colorcet/tree/master/doc
 
 extra:
   recipe-maintainers:
